@@ -16,9 +16,9 @@ namespace Mined_Out
 
         static void ShowField(Game game)
         {
-            for (int i = 0; i < game.PlayingField.Cells.GetLength(0) - 1; i++)
+            for (int i = 0; i < game.PlayingField.Cells.GetLength(0); i++)
             {
-                for (int j = 0; j < game.PlayingField.Cells.GetLength(1) - 1; j++)
+                for (int j = 0; j < game.PlayingField.Cells.GetLength(1); j++)
                 {
                     if (game.PlayingField.Cells[i, j].Value is Barrier)
                         Console.Write("#");
