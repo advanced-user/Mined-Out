@@ -5,6 +5,26 @@
     <e p="C:\Users\Home\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Mined-Out.465765838.00" t="ExcludeRecursive" />
     <e p="C:\Users\Home\AppData\Roaming\JetBrains\Rider2020.3\extensions" t="IncludeRecursive" />
     <e p="C:\Users\Home\Desktop\Mined-Out\Mined-Out" t="IncludeFlat">
+      <e p="Engine" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include" />
+        <e p="Engine.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Bomb.cs" t="Include" />
+          <e p="Coordinates.cs" t="Include" />
+          <e p="FieldSize.cs" t="Include" />
+          <e p="Game.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayingField.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="Engine.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="Mined-Out" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Mined-Out.csproj" t="IncludeRecursive" />
