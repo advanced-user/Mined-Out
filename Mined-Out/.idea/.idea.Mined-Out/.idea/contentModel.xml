@@ -10,12 +10,16 @@
         <e p="Controllers" t="Include" />
         <e p="Engine.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
+          <e p="Barrier.cs" t="Include" />
           <e p="Bomb.cs" t="Include" />
-          <e p="Coordinates.cs" t="Include" />
-          <e p="FieldSize.cs" t="Include" />
           <e p="Game.cs" t="Include" />
           <e p="Player.cs" t="Include" />
-          <e p="PlayingField.cs" t="Include" />
+          <e p="PlayingField" t="Include">
+            <e p="Cell.cs" t="Include" />
+            <e p="Coordinates.cs" t="Include" />
+            <e p="FieldSize.cs" t="Include" />
+            <e p="PlayingField.cs" t="Include" />
+          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

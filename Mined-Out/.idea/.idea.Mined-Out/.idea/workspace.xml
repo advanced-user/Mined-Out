@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437eff80-fc60-4214-b9fd-e050a679db11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Engine/Models/PlayingField/PlayingField.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Mined-Out.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Models/Coordinates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/PlayingField/Coordinates.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Models/FieldSize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/PlayingField/FieldSize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Models/PlayingField.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +27,10 @@
       <option value="$PROJECT_DIR$/Engine/Models/Player.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/Coordinates.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/Bomb.cs" />
+      <option value="$PROJECT_DIR$/Engine/Models/Barrier.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/FieldSize.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/PlayingField.cs" />
+      <option value="$PROJECT_DIR$/Engine/Models/PlayingField/Cell.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1q9KzhmE9WvxAGXB2QpXn7Qn9NV" />
@@ -77,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616486633372</updated>
       <workItem from="1616486646353" duration="11000" />
-      <workItem from="1618220341502" duration="2165000" />
+      <workItem from="1618220341502" duration="4882000" />
     </task>
     <servers />
   </component>
