@@ -4,21 +4,21 @@
     {
         public Cell[,] Cells { get; set; }
         public Player Player { get; set; }
-        public Bomb[] Bombs { get; set; }
-        public Barrier[] Barriers { get; set; }
         public  Size FieldSize { get; set; }
         public int CellSize { get; set; }
 
-        public PlayingField(Player player,int numberOfBombs, int width, int height, int cellSize)
+        public PlayingField(int numberOfBombs, int width, int height, int cellSize)
         {
             FieldSize = new Size(width, height);
             CellSize = cellSize;
-            Player = player;
-            Bombs = new Bomb[numberOfBombs];
-            Barriers = new Barrier[(int)CountTheNumberOfBarriers()];
-            
-            GenerateCells();
+
             FieldGeneration(numberOfBombs);
+        }
+        
+        private void FieldGeneration(int numberOfBombs)
+        {
+            GenerateCells();
+            GenerationOfBarriers();
         }
 
         private void GenerateCells()
@@ -41,32 +41,33 @@
             }
         }
         
-        private double CountTheNumberOfBarriers()
-        {
-            return 2 * FieldSize.Height + 2 * FieldSize.Width - 10;
-        }
-        
-        private void FieldGeneration(int numberOfBombs)
-        {
-            GenerationOfBarriers();
-        }
-
         private void GenerationOfBarriers()
         {
-            double coordinateX = FieldSize.Width / 2;
-
-            for (int i = 0; i < FieldSize.Width; i++)
-            {
-                if (i != coordinateX - 1 && i != coordinateX && i != coordinateX + 1)
-                {
-                    Barrier barrier = new Barrier(i, 0);
-                    
-                }
-            }
+            int indexX = (int)(FieldSize.Width / 2);
+            StartAndFinish(indexX, 0);
 
             for (int i = 1; i < FieldSize.Height - 1; i++)
             {
+                Barrier barrier1 = new Barrier(Cells[0, i].Coordinates.X, Cells[0, i].Coordinates.Y);
+                Cells[i, 0].Value = barrier1;
                 
+                Barrier barrier2 = new Barrier(Cells[0, i].Coordinates.X, Cells[0, i].Coordinates.Y);
+                Cells[i, Cells.GetLength(1) - 1].Value = barrier2;
+                
+            }
+            
+            StartAndFinish(indexX, Cells.GetLength(1) - 1);
+        }
+
+        private void StartAndFinish(int indexX, int indexY)
+        {
+            for (int i = 0; i < Cells.GetLength(0); i++)
+            {
+                if (i != indexX - 1 && i != indexX && i != indexX + 1)
+                {
+                    Barrier barrier = new Barrier(Cells[0, i].Coordinates.X, Cells[0, i].Coordinates.Y);
+                    Cells[indexY, i].Value = barrier;
+                }
             }
         }
     }

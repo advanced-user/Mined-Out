@@ -6,4 +6,8 @@
         <RootNamespace>Mined_Out</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Engine\Engine.csproj" />
+    </ItemGroup>
+
 </Project>

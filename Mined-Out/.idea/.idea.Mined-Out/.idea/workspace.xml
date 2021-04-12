@@ -5,29 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437eff80-fc60-4214-b9fd-e050a679db11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Models/PlayingField/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/PlayingField/Cell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Models/PlayingField/Coordinates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/PlayingField/Coordinates.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Models/PlayingField/FieldSize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/PlayingField/Size.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/ConsoleImplementation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/ConsoleImplementation.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/ConsoleImplementation.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/ConsoleImplementation.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Models/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/Game.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/Models/PlayingField/PlayingField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/PlayingField/PlayingField.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Mined-Out.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/Mined-Out.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/ConsoleImplementation.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/Debug/net5.0/Mined-Out.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/Mined-Out.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/Debug/net5.0/Mined-Out.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/Mined-Out.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/Debug/net5.0/Mined-Out.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/Mined-Out.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/Debug/net5.0/Mined-Out.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/Mined-Out.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/Debug/net5.0/Mined-Out.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/Mined-Out.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/Mined-Out.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Mined-Out.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/Mined-Out.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Mined-Out.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/Mined-Out.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Mined-Out.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mined-Out/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +31,6 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Engine/Class1.cs" />
-      <option value="$PROJECT_DIR$/Engine/Models/Game.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/Player.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/Coordinates.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/Bomb.cs" />
@@ -56,6 +42,8 @@
       <option value="$PROJECT_DIR$/Engine/Models/PlayingField/Size.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/PlayingField/Cell.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/PlayingField/PlayingField.cs" />
+      <option value="$PROJECT_DIR$/Engine/Models/Game.cs" />
+      <option value="$PROJECT_DIR$/ConsoleImplementation/Program.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1q9KzhmE9WvxAGXB2QpXn7Qn9NV" />
@@ -65,6 +53,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34993774" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -106,7 +96,7 @@
       <updated>1616486633372</updated>
       <workItem from="1616486646353" duration="11000" />
       <workItem from="1618220341502" duration="5400000" />
-      <workItem from="1618241410188" duration="2969000" />
+      <workItem from="1618241410188" duration="7925000" />
     </task>
     <servers />
   </component>
@@ -129,5 +119,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleImplementation/Program.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Users\Home\Desktop\Mined-Out\Mined-Out\ConsoleImplementation\Program.cs" initialLine="22" containingFunctionPresentation="method 'ShowField'">
+            <startOffsets>
+              <option value="507" />
+            </startOffsets>
+            <endOffsets>
+              <option value="558" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
