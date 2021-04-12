@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Home\\Desktop\\Mined-Out\\Mined-Out\\Mined-Out\\Mined-Out.csproj",
-      "projectName": "Mined-Out",
-      "projectPath": "C:\\Users\\Home\\Desktop\\Mined-Out\\Mined-Out\\Mined-Out\\Mined-Out.csproj",
+      "projectUniqueName": "C:\\Users\\Home\\Desktop\\Mined-Out\\Mined-Out\\ConsoleImplementation\\ConsoleImplementation.csproj",
+      "projectName": "ConsoleImplementation",
+      "projectPath": "C:\\Users\\Home\\Desktop\\Mined-Out\\Mined-Out\\ConsoleImplementation\\ConsoleImplementation.csproj",
       "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Home\\Desktop\\Mined-Out\\Mined-Out\\Mined-Out\\obj\\",
+      "outputPath": "C:\\Users\\Home\\Desktop\\Mined-Out\\Mined-Out\\ConsoleImplementation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",

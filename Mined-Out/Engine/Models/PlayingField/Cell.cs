@@ -2,15 +2,15 @@
 {
     public struct Cell
     {
-        public Coordinates Coordinates { get; set; }
-        public double Width { get; set; }
-        public  double Height { get; set; }
+        public readonly Size Size;
+        public Coordinates Coordinates;
+        public object Value;
 
-        public Cell(double x, double y, double width, double height)
+        public Cell(object value,double x, double y, double size)
         {
+            Value = value;
             Coordinates = new Coordinates(x, y);
-            Width = width;
-            Height = height;
+            Size = new Size(size, size);
         }
     }
 }

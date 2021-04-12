@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mined-Out", "Mined-Out\Mined-Out.csproj", "{09FBD5AE-58C1-4744-BE0E-DDC6FFFEBC08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleImplementation", "ConsoleImplementation\ConsoleImplementation.csproj", "{09FBD5AE-58C1-4744-BE0E-DDC6FFFEBC08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{148F8FFE-2560-4DC1-98B8-76B438C90D9F}"
 EndProject

@@ -5,6 +5,18 @@
     <e p="C:\Users\Home\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Mined-Out.465765838.00" t="ExcludeRecursive" />
     <e p="C:\Users\Home\AppData\Roaming\JetBrains\Rider2020.3\extensions" t="IncludeRecursive" />
     <e p="C:\Users\Home\Desktop\Mined-Out\Mined-Out" t="IncludeFlat">
+      <e p="ConsoleImplementation" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ConsoleImplementation.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="ConsoleImplementation.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
       <e p="Engine" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include" />
@@ -17,8 +29,8 @@
           <e p="PlayingField" t="Include">
             <e p="Cell.cs" t="Include" />
             <e p="Coordinates.cs" t="Include" />
-            <e p="FieldSize.cs" t="Include" />
             <e p="PlayingField.cs" t="Include" />
+            <e p="Size.cs" t="Include" />
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -28,18 +40,6 @@
             </e>
           </e>
         </e>
-      </e>
-      <e p="Mined-Out" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Mined-Out.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="net5.0" t="Include">
-              <e p="Mined-Out.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Program.cs" t="Include" />
       </e>
       <e p="Mined-Out.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
