@@ -1,4 +1,6 @@
-﻿namespace Engine.Models
+﻿using System;
+
+namespace Engine.Models
 {
     public class PlayingField
     {
@@ -19,6 +21,7 @@
         {
             GenerateCells();
             GenerationOfBarriers();
+            GenerateBombes(numberOfBombs);
         }
 
         private void GenerateCells()
@@ -44,7 +47,7 @@
         private void GenerationOfBarriers()
         {
             int indexX = (int)(FieldSize.Width / 2);
-            StartAndFinish(indexX, 0);
+            StartAndFinishBarriers(indexX, 0);
 
             for (int i = 1; i < FieldSize.Height - 1; i++)
             {
@@ -56,10 +59,10 @@
                 
             }
             
-            StartAndFinish(indexX, Cells.GetLength(1) - 1);
+            StartAndFinishBarriers(indexX, Cells.GetLength(1) - 1);
         }
 
-        private void StartAndFinish(int indexX, int indexY)
+        private void StartAndFinishBarriers(int indexX, int indexY)
         {
             for (int i = 0; i < Cells.GetLength(0); i++)
             {
@@ -68,6 +71,20 @@
                     Barrier barrier = new Barrier(Cells[0, i].Coordinates.X, Cells[0, i].Coordinates.Y);
                     Cells[indexY, i].Value = barrier;
                 }
+            }
+        }
+
+        private void GenerateBombes(int numberOfBombs)
+        {
+            for (int i = 0; i < numberOfBombs; i++)
+            {
+                Random rnd = new Random();
+
+                int x = rnd.Next(1, Cells.GetLength(1) - 1);
+                int y = rnd.Next(2, Cells.GetLength(0) - 2);
+
+                Bomb bomb = new Bomb(Cells[y,x].Coordinates.X, Cells[y,x].Coordinates.Y);
+                Cells[y,x].Value = bomb;
             }
         }
     }

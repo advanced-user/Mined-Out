@@ -6,7 +6,7 @@
 
         public Game()
         {
-            int numberOfBombs = 10;
+            int numberOfBombs = 5;
             int width = 10;
             int height = 10;
             int cellSize = 1;

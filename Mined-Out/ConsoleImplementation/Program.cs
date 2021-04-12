@@ -22,6 +22,8 @@ namespace Mined_Out
                 {
                     if (game.PlayingField.Cells[i, j].Value is Barrier)
                         Console.Write("#");
+                    else if(game.PlayingField.Cells[i, j].Value is Bomb)
+                        Console.Write("b");
                     else
                         Console.Write(" ");
                 }
