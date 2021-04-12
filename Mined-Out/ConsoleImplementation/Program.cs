@@ -24,6 +24,8 @@ namespace Mined_Out
                         Console.Write("#");
                     else if(game.PlayingField.Cells[i, j].Value is Bomb)
                         Console.Write("b");
+                    else if(game.PlayingField.Cells[i, j].Value is Player)
+                        Console.Write("@");
                     else
                         Console.Write(" ");
                 }

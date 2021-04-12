@@ -22,6 +22,7 @@ namespace Engine.Models
             GenerateCells();
             GenerationOfBarriers();
             GenerateBombes(numberOfBombs);
+            GeneratePlayer();
         }
 
         private void GenerateCells()
@@ -86,6 +87,15 @@ namespace Engine.Models
                 Bomb bomb = new Bomb(Cells[y,x].Coordinates.X, Cells[y,x].Coordinates.Y);
                 Cells[y,x].Value = bomb;
             }
+        }
+
+        private void GeneratePlayer()
+        {
+            int indexX = Cells.GetLength(1) / 2;
+            int indexY = Cells.GetLength(0) - 1;
+
+            Player = new Player(Cells[indexY, indexX].Coordinates.X, Cells[indexY, indexX].Coordinates.Y);
+            Cells[indexY, indexX].Value = Player;
         }
     }
 }

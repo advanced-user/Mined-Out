@@ -14,7 +14,6 @@
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Models/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/Game.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/Models/PlayingField/PlayingField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/PlayingField/PlayingField.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/Engine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/Engine.pdb" afterDir="false" />
@@ -102,7 +101,7 @@
       <workItem from="1616486646353" duration="11000" />
       <workItem from="1618220341502" duration="5400000" />
       <workItem from="1618241410188" duration="7925000" />
-      <workItem from="1618254206738" duration="1242000" />
+      <workItem from="1618254206738" duration="1900000" />
     </task>
     <servers />
   </component>
@@ -141,6 +140,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Engine/Models/PlayingField/PlayingField.cs</url>
+          <line>96</line>
+          <properties documentPath="C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine\Models\PlayingField\PlayingField.cs" initialLine="96" containingFunctionPresentation="method 'GeneratePlayer'">
+            <startOffsets>
+              <option value="3020" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3121" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
