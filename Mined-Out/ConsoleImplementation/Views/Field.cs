@@ -1,9 +1,5 @@
 ﻿using Engine.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mined_Out
 {
@@ -20,7 +16,7 @@ namespace Mined_Out
                     else if (game.PlayingField.Cells[i, j].Value is Bomb)
                         Console.Write("b");
                     else if (game.PlayingField.Cells[i, j].Value is Player)
-                        Console.Write("@");
+                        Console.Write(game.PlayingField.Player.NumberOfBombs);
                     else if (game.PlayingField.Cells[i, j].Value is PlayerFootprint)
                         Console.Write(".");
                     else
