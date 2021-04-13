@@ -2,11 +2,11 @@
 {
     public class Bomb
     {
-        public Coordinates Coordinates { get; set; }
+        public CellIndices CellIndices { get; set; }
 
-        public Bomb(double x, double y)
+        public Bomb(int i, int j)
         {
-            Coordinates = new Coordinates(x, y);
+            CellIndices = new CellIndices(i, j);
         }
     }
 }

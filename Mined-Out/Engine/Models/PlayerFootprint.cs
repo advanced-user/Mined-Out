@@ -1,11 +1,10 @@
 ﻿namespace Engine.Models
 {
-    public class Player
-    {
+	public class PlayerFootprint
+	{
         public CellIndices CellIndices { get; set; }
-        public int NumberOfBombs { get; set; }
 
-        public Player(int i, int j)
+        public PlayerFootprint(int i, int j)
         {
             CellIndices = new CellIndices(i, j);
         }

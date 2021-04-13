@@ -2,11 +2,11 @@
 {
     public class Barrier
     {
-        public Coordinates Coordinates { get; set; }
+        public CellIndices CellIndices { get; set; }
 
-        public Barrier(double x, double y)
+        public Barrier(int i, int j)
         {
-            Coordinates = new Coordinates(x ,y);
+            CellIndices = new CellIndices(i, j);
         }
     }
 }

@@ -52,10 +52,10 @@ namespace Engine.Models
 
             for (int i = 1; i < FieldSize.Height - 1; i++)
             {
-                Barrier barrier1 = new Barrier(Cells[0, i].Coordinates.X, Cells[0, i].Coordinates.Y);
+                Barrier barrier1 = new Barrier(i, 0);
                 Cells[i, 0].Value = barrier1;
                 
-                Barrier barrier2 = new Barrier(Cells[0, i].Coordinates.X, Cells[0, i].Coordinates.Y);
+                Barrier barrier2 = new Barrier(i, Cells.GetLength(1) - 1);
                 Cells[i, Cells.GetLength(1) - 1].Value = barrier2;
                 
             }
@@ -69,7 +69,7 @@ namespace Engine.Models
             {
                 if (i != indexX - 1 && i != indexX && i != indexX + 1)
                 {
-                    Barrier barrier = new Barrier(Cells[0, i].Coordinates.X, Cells[0, i].Coordinates.Y);
+                    Barrier barrier = new Barrier(indexY, i);
                     Cells[indexY, i].Value = barrier;
                 }
             }
@@ -84,7 +84,7 @@ namespace Engine.Models
                 int x = rnd.Next(1, Cells.GetLength(1) - 1);
                 int y = rnd.Next(2, Cells.GetLength(0) - 2);
 
-                Bomb bomb = new Bomb(Cells[y,x].Coordinates.X, Cells[y,x].Coordinates.Y);
+                Bomb bomb = new Bomb(y, x);
                 Cells[y,x].Value = bomb;
             }
         }
@@ -94,7 +94,7 @@ namespace Engine.Models
             int indexX = Cells.GetLength(1) / 2;
             int indexY = Cells.GetLength(0) - 1;
 
-            Player = new Player(Cells[indexY, indexX].Coordinates.X, Cells[indexY, indexX].Coordinates.Y);
+            Player = new Player(indexY, indexX);
             Cells[indexY, indexX].Value = Player;
         }
     }
