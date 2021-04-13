@@ -13,5 +13,7 @@
 
             PlayingField = new PlayingField(numberOfBombs, width, height, cellSize);
         }
+        
+        
     }
 }
