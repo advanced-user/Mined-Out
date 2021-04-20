@@ -3,17 +3,29 @@
     public class Game
     {
         public PlayingField PlayingField { get; set; }
+        public bool IsLoosing { get; set; }
+        public bool IsWinning { get; set; }
+        public int Level { get; set; }
 
         public Game()
         {
-            int numberOfBombs = 5;
-            int width = 10;
-            int height = 10;
+            Level = 1;
+            LoadLevel();
+        }
+
+        public void LoadLevel()
+		{
+            IsLoosing = false;
+            IsWinning = false;
+
+            int numberOfBombs = 5 + Level*3;
+            int width = 10 + Level*2;
+            int height = 10 + Level * 2;
             int cellSize = 1;
 
             PlayingField = new PlayingField(numberOfBombs, width, height, cellSize);
         }
-        
+
         public void PlayerMovement(string direction)
 		{
             int i = PlayingField.Player.CellIndices.I;
@@ -45,11 +57,37 @@
 
         private void Move(int i, int j)
 		{
-            PlayingField.Cells[i, j].Value = PlayingField.Player;
-            PlayingField.Player.CellIndices = new CellIndices(i, j);
+            if (i >= PlayingField.Cells.GetLength(0))
+            {
+                CountTheNumberOfBombs(i, j);
+                return;
+            }
 
-            CountTheNumberOfBombs(i, j);
+            if (i < 0)
+            {
+                IsWinning = true;
+                Level++;
+                return;
+            }
+
+            if (PlayingField.Cells[i,j].Value == null || PlayingField.Cells[i,j].Value is PlayerFootprint)
+			{
+                PlayingField.Cells[i, j].Value = PlayingField.Player;
+                PlayingField.Player.CellIndices = new CellIndices(i, j);
+
+                CountTheNumberOfBombs(i, j);
+
+                return;
+
+			}
+
+            GameOver();
         }
+
+        private void GameOver()
+		{
+            IsLoosing = true;
+		}
 
         private void CountTheNumberOfBombs(int i, int j)
 		{

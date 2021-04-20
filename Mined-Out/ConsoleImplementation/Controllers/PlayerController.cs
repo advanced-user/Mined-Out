@@ -1,9 +1,6 @@
 ﻿using Engine.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Mined_Out
 {
@@ -14,14 +11,13 @@ namespace Mined_Out
 		public PlayerController(Game game)
 		{
 			Game = game;
-			HandlingKeystrokes();
-		}
+        }
 
 		public void HandlingKeystrokes()
 		{
-            Field.DrawField(Game);
+            Field.DrawField(Game, " ");
 
-            while (true)
+            while (!Game.IsLoosing)
             {
                 var key = Console.ReadKey().Key;
                 switch (key)
@@ -41,6 +37,11 @@ namespace Mined_Out
                 }
 
                 Field.RedrawField(Game);
+                if(Game.IsWinning)
+				{
+                    Thread.Sleep(2000);
+                    Game.LoadLevel();
+				}
             }
         }
 	}
