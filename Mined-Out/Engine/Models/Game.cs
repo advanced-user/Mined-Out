@@ -6,6 +6,8 @@
         public bool IsLoosing { get; set; }
         public bool IsWinning { get; set; }
         public int Level { get; set; }
+        public int NumberOfMoves { get; set; }
+        public TimeCounter TimeCounter { get; set; }
 
         public Game()
         {
@@ -18,6 +20,8 @@
             IsLoosing = false;
             IsWinning = false;
 
+            NumberOfMoves = 0;
+
             int numberOfBombs = 5 + Level*3;
             int width = 10 + Level*2;
             int height = 10 + Level * 2;
@@ -28,6 +32,8 @@
 
         public void PlayerMovement(string direction)
 		{
+            NumberOfMoves++;
+
             int i = PlayingField.Player.CellIndices.I;
             int j = PlayingField.Player.CellIndices.J;
             FootPrint(i, j);

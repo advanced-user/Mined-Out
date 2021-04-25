@@ -2,8 +2,8 @@
 {
 	public struct CellIndices
 	{
-		public int I { get; set; }
-		public int J { get; set; }
+		public int I;
+		public int J;
 
 		public CellIndices(int i, int j)
 		{

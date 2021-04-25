@@ -15,11 +15,14 @@ namespace Mined_Out
 
 		public void HandlingKeystrokes()
 		{
-            Field.DrawField(Game, " ");
+            var field = new Field(Game);
+            field.DrawField(" ");
+            field.StartTimer(0);
 
             while (!Game.IsLoosing)
             {
                 var key = Console.ReadKey().Key;
+
                 switch (key)
                 {
                     case ConsoleKey.UpArrow:
@@ -36,7 +39,8 @@ namespace Mined_Out
                         break;
                 }
 
-                Field.RedrawField(Game);
+                field.RedrawField();
+
                 if(Game.IsWinning)
 				{
                     Thread.Sleep(2000);
