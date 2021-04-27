@@ -46,6 +46,10 @@ namespace Mined_Out
                     Thread.Sleep(2000);
                     Game.LoadLevel();
 				}
+                else if(Game.IsLoosing)
+				{
+
+				}
             }
         }
 	}
