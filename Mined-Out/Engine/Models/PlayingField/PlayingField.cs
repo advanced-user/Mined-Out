@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Engine.Models
 {
@@ -16,6 +17,15 @@ namespace Engine.Models
 
             FieldGeneration(numberOfBombs);
         }
+
+		public PlayingField(Player player, List<PlayerFootprint> playerFootprints, List<Bomb> bombs, List<Barrier> barriers, int width, int height, int fieldCellSize)
+		{
+            Player = player;
+            FieldSize = new Size(width, height);
+            CellSize = fieldCellSize;
+
+            FieldGenerationWithParams(playerFootprints, bombs, barriers);
+		}
         
         private void FieldGeneration(int numberOfBombs)
         {
@@ -23,6 +33,43 @@ namespace Engine.Models
             GenerationOfBarriers();
             GenerateBombes(numberOfBombs);
             GeneratePlayer();
+        }
+
+        private void FieldGenerationWithParams(List<PlayerFootprint> playerFootprints, List<Bomb> bombs, List<Barrier> barriers)
+		{
+            int width = (int)FieldSize.Width / CellSize;
+            int height = (int)FieldSize.Height / CellSize;
+
+            Cells = new Cell[width, height];
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    int x = width * j;
+                    int y = height * i;
+
+                    Cell cell = new Cell(null, x, y, CellSize);
+                    Cells[i, j] = cell;
+                }
+            }
+
+            Cells[Player.I, Player.J].Value = Player;
+
+			foreach (var item in playerFootprints)
+			{
+                Cells[item.I, item.J].Value = item;
+			}
+
+            foreach (var item in bombs)
+            {
+                Cells[item.I, item.J].Value = item;
+            }
+
+            foreach (var item in barriers)
+            {
+                Cells[item.I, item.J].Value = item;
+            }
         }
 
         private void GenerateCells()

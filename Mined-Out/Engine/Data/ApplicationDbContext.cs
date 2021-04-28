@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Engine.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,15 @@ using System.Threading.Tasks;
 
 namespace Engine.Data
 {
-	class ApplicationDbContext : DbContext
+	public class ApplicationDbContext : DbContext
 	{
+        public DbSet<BestScore> BestScore { get; set; }
+        public DbSet<Save> Saves { get; set; }
+        public DbSet<Player> Players { get; set; }
+        public DbSet<Bomb> Bombs { get; set; }
+        public DbSet<Barrier> Barriers { get; set; }
+        public DbSet<PlayerFootprint> PlayerFootprints { get; set; }
+
         public ApplicationDbContext()
         {
             Database.EnsureCreated();
@@ -16,7 +24,7 @@ namespace Engine.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=helloappdb;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("server=(localdb)\\MSSQLLocalDB;database=Mined-OutDb;Integrated Security=true");
         }
     }
 }

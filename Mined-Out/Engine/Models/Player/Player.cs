@@ -1,13 +1,13 @@
 ﻿namespace Engine.Models
 {
-    public class Player
+    public class Player : PreservedCell
     {
-        public CellIndices CellIndices { get; set; }
         public int NumberOfBombs { get; set; }
 
         public Player(int i, int j)
         {
-            CellIndices = new CellIndices(i, j);
+            I = i;
+            J = j;
         }
     }
 }

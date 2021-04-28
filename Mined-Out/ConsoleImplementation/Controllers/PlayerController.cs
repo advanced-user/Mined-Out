@@ -1,4 +1,5 @@
 ﻿using Engine.Models;
+using Mined_Out.Views;
 using System;
 using System.Threading;
 
@@ -15,11 +16,18 @@ namespace Mined_Out
 
 		public void HandlingKeystrokes()
 		{
+            var menu = new Menu(Game);
+            menu.ShowMenu();
+
             var field = new Field(Game);
             field.DrawField(" ");
-            field.StartTimer(0);
 
-            while (!Game.IsLoosing)
+            if (Game.TimeCounter == null)
+                field.StartTimer(0);
+            else
+                field.StartTimer(Game.TimeCounter.AmountOfTime);
+
+            while (true)
             {
                 var key = Console.ReadKey().Key;
 
@@ -37,18 +45,32 @@ namespace Mined_Out
                     case ConsoleKey.RightArrow:
                         Game.PlayerMovement("right");
                         break;
+                    case ConsoleKey.S:
+                        Game.SaveTheGame();
+                        break;
                 }
 
                 field.RedrawField();
 
                 if(Game.IsWinning)
 				{
-                    Thread.Sleep(2000);
                     Game.LoadLevel();
 				}
                 else if(Game.IsLoosing)
 				{
+					Console.WriteLine("Если хотети начать заново, нажмите: y");
 
+                    bool isRestart = false;
+
+                    while(!isRestart)
+					{
+                        var k = Console.ReadKey().Key;
+                        if (k == ConsoleKey.Y)
+						{
+                            Game.LoadLevel();
+                            isRestart = true;
+                        }
+					}
 				}
             }
         }

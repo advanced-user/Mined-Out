@@ -28,9 +28,11 @@ namespace Engine.Models
 			var time = new Stopwatch();
 			time.Start();
 
+			int savedTime = AmountOfTime;
+
 			while (IsRun)
 			{
-				AmountOfTime = time.Elapsed.Seconds;
+				AmountOfTime = time.Elapsed.Seconds + savedTime;
 				Thread.Sleep(500);
 			}
 		}

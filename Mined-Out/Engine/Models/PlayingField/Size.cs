@@ -2,10 +2,10 @@
 {
     public struct Size
     {
-        public readonly double Width;
-        public readonly double Height;
+        public readonly int Width;
+        public readonly int Height;
 
-        public Size(double width, double height)
+        public Size(int width, int height)
         {
             Width = width;
             Height = height;

@@ -6,7 +6,7 @@
         public Coordinates Coordinates;
         public object Value;
 
-        public Cell(object value,double x, double y, double size)
+        public Cell(object value,double x, double y, int size)
         {
             Value = value;
             Coordinates = new Coordinates(x, y);

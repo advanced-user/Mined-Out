@@ -1,17 +1,23 @@
-﻿namespace Engine.Models
+﻿using Engine.Data;
+using System.Collections.Generic;
+
+namespace Engine.Models
 {
     public class Game
     {
         public PlayingField PlayingField { get; set; }
         public bool IsLoosing { get; set; }
         public bool IsWinning { get; set; }
+        public bool IsSaved { get; set; }
         public int Level { get; set; }
         public int NumberOfMoves { get; set; }
+        public int Scores { get; set; }
         public TimeCounter TimeCounter { get; set; }
 
         public Game()
         {
             Level = 1;
+            Scores = 0;
             LoadLevel();
         }
 
@@ -22,7 +28,7 @@
 
             NumberOfMoves = 0;
 
-            int numberOfBombs = 5 + Level*3;
+            int numberOfBombs = 3 + Level*3;
             int width = 10 + Level*2;
             int height = 10 + Level * 2;
             int cellSize = 1;
@@ -34,8 +40,8 @@
 		{
             NumberOfMoves++;
 
-            int i = PlayingField.Player.CellIndices.I;
-            int j = PlayingField.Player.CellIndices.J;
+            int i = PlayingField.Player.I;
+            int j = PlayingField.Player.J;
             FootPrint(i, j);
 
             switch (direction)
@@ -79,7 +85,8 @@
             if (PlayingField.Cells[i,j].Value == null || PlayingField.Cells[i,j].Value is PlayerFootprint)
 			{
                 PlayingField.Cells[i, j].Value = PlayingField.Player;
-                PlayingField.Player.CellIndices = new CellIndices(i, j);
+                PlayingField.Player.I = i;
+                PlayingField.Player.J = j;
 
                 CountTheNumberOfBombs(i, j);
 
@@ -110,6 +117,72 @@
 					}
 				}
 			}
+		}
+
+        public void SaveTheGame()
+		{
+            var bombs = new List<Bomb>();
+            var playerFootprints = new List<PlayerFootprint>();
+            var barriers = new List<Barrier>();
+
+            int width = PlayingField.FieldSize.Width / PlayingField.CellSize;
+            int height = PlayingField.FieldSize.Height / PlayingField.CellSize;
+
+            for (int i = 0; i < height; i++)
+			{
+                for(int j = 0; j < width; j++)
+				{
+                    if(PlayingField.Cells[i, j].Value != null)
+					{
+                        if(PlayingField.Cells[i, j].Value is Barrier)
+						{
+                            Barrier barrier = new Barrier(i , j);
+                            barriers.Add(barrier);
+						}
+                        else if(PlayingField.Cells[i, j].Value is PlayerFootprint)
+						{
+                            PlayerFootprint playerFootprint = new PlayerFootprint(i, j);
+                            playerFootprints.Add(playerFootprint);
+                        }
+                        else if(PlayingField.Cells[i, j]. Value is Bomb)
+						{
+                            Bomb bomb = new Bomb(i, j);
+                            bombs.Add(bomb);
+                        }
+					}
+				}
+			}
+
+            Save save = new Save();
+            save.Time = TimeCounter.AmountOfTime;
+            save.NumberOfMoves = NumberOfMoves;
+            save.Level = Level;
+            save.FieldCellSize = PlayingField.CellSize;
+            save.Scores = Scores;
+            save.FieldHeight = PlayingField.FieldSize.Height;
+            save.FieldWidth = PlayingField.FieldSize.Width;
+            save.Players = new List<Player> { PlayingField.Player };
+            save.Barriers = barriers;
+            save.Bombs = bombs;
+            save.PlayerFootprints = playerFootprints;
+
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                db.Saves.Add(save);
+                db.SaveChanges();
+            }
+
+            IsSaved = true;
+        }
+
+        private void CalculatePlayerPoints()
+		{
+
+		}
+
+        private void UpdateBestScore()
+		{
+
 		}
     }
 }

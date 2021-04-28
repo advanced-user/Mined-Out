@@ -46,9 +46,7 @@ namespace Mined_Out
                 Console.WriteLine("Время прохождения уровня в секундах: " + Game.TimeCounter.AmountOfTime);
             Console.WriteLine();
 
-            if (Game.IsWinning)
-				Console.WriteLine("Вы выиграли ");
-            else if(Game.IsLoosing)
+            if(Game.IsLoosing)
 				Console.WriteLine("Вы проиграли ");
 
             Console.BackgroundColor = ConsoleColor.DarkGreen;
@@ -63,7 +61,7 @@ namespace Mined_Out
             if(!_isRedrawing)
 			{
                 if (Game.IsLoosing)
-                    DrawField("*");
+                    DrawField("b");
                 else
                     DrawField(" ");
             }
