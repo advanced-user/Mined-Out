@@ -18,6 +18,8 @@ namespace Mined_Out
 
         public void DrawField(string bomb)
         {
+            Console.Clear();
+
             _isRedrawing = true;
             Console.ForegroundColor = ConsoleColor.Gray;
 			Console.WriteLine("Уровень: " + Game.Level);
@@ -42,9 +44,8 @@ namespace Mined_Out
 
 			Console.WriteLine();
 			Console.WriteLine("Количество ходов: " + Game.NumberOfMoves);
-            if(Game.TimeCounter != null)
-                Console.WriteLine("Время прохождения уровня в секундах: " + Game.TimeCounter.AmountOfTime);
-            Console.WriteLine();
+			
+			Console.WriteLine();
 
             if(Game.IsLoosing)
 				Console.WriteLine("Вы проиграли ");
@@ -56,8 +57,6 @@ namespace Mined_Out
 
         public void RedrawField()
 		{
-            Console.Clear();
-
             if(!_isRedrawing)
 			{
                 if (Game.IsLoosing)
@@ -80,8 +79,11 @@ namespace Mined_Out
             while (!Game.IsWinning && !Game.IsLoosing)
             {
                 if(!_isRedrawing)
-                    RedrawField();
-                Thread.Sleep(500);
+				{
+                    Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    Console.WriteLine("Время прохождения уровня: " + Game.TimeCounter.AmountOfTime);
+                }
+                Thread.Sleep(100);
             }
         }
     }
