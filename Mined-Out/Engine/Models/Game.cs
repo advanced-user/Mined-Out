@@ -35,7 +35,7 @@ namespace Engine.Models
 
             NumberOfMoves = 0;
 
-            int numberOfBombs = 3 + Level*3;
+            int numberOfBombs = 3 + Level*30;
             int width = 10 + Level*2;
             int height = 10 + Level * 2;
             int cellSize = 1;

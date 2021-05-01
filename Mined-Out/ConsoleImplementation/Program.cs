@@ -10,10 +10,10 @@ namespace Mined_Out
             Game game = new Game();
             PlayerController playerController = new PlayerController(game);
 
-            Field field = new Field(game);
-            field.DrawField("b");
+            //Field field = new Field(game);
+            //field.DrawField("b");
 
-            //playerController.HandlingKeystrokes();
+            playerController.HandlingKeystrokes();
         }
     }
 }

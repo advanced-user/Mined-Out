@@ -34,6 +34,10 @@ namespace Engine.Models
             GenerationOfBarriers();
             GenerateBombes(numberOfBombs);
             GeneratePlayer();
+
+            Graph graph = new Graph(Cells, Player);
+            if (!graph.IsValid())
+                FieldGeneration(numberOfBombs);
         }
 
         private void FieldGenerationWithParams(List<PlayerFootprint> playerFootprints, List<Bomb> bombs, List<Barrier> barriers)
@@ -135,9 +139,6 @@ namespace Engine.Models
                 Bomb bomb = new Bomb(y, x);
                 Cells[y,x].Value = bomb;
             }
-
-            Graph graph = new Graph(Cells);
-
         }
 
         private void GeneratePlayer()
