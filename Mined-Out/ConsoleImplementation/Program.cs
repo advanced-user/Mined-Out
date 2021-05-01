@@ -1,5 +1,4 @@
 ﻿using Engine.Models;
-using Mined_Out.Views;
 
 namespace Mined_Out
 {

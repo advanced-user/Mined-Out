@@ -1,8 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleImplementation", "ConsoleImplementation\ConsoleImplementation.csproj", "{09FBD5AE-58C1-4744-BE0E-DDC6FFFEBC08}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleImplementation", "ConsoleImplementation\ConsoleImplementation.csproj", "{09FBD5AE-58C1-4744-BE0E-DDC6FFFEBC08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{148F8FFE-2560-4DC1-98B8-76B438C90D9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engine", "Engine\Engine.csproj", "{148F8FFE-2560-4DC1-98B8-76B438C90D9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +21,11 @@ Global
 		{148F8FFE-2560-4DC1-98B8-76B438C90D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{148F8FFE-2560-4DC1-98B8-76B438C90D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{148F8FFE-2560-4DC1-98B8-76B438C90D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13CCC14B-4F65-4BCB-BE99-BD74DC1EB027}
 	EndGlobalSection
 EndGlobal

@@ -1,7 +1,6 @@
 ﻿using Engine.Models;
 using Mined_Out.Views;
 using System;
-using System.Threading;
 
 namespace Mined_Out
 {

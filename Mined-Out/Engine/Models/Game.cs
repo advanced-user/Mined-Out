@@ -1,6 +1,9 @@
 ﻿using Engine.Data;
+using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace Engine.Models
 {
@@ -35,10 +38,12 @@ namespace Engine.Models
 
             NumberOfMoves = 0;
 
-            int numberOfBombs = 3 + Level*30;
-            int width = 10 + Level*2;
-            int height = 10 + Level * 2;
-            int cellSize = 1;
+            var game = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(@"C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine\Data\settings.json"));
+
+            int numberOfBombs = game.NumberOfBombs + Level*100;
+            int width = game.Width + Level*2;
+            int height = game.Height + Level * 2;
+            int cellSize = game.CellSize;
 
             PlayingField = new PlayingField(numberOfBombs, width, height, cellSize);
         }
