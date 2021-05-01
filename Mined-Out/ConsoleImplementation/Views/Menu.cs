@@ -2,6 +2,8 @@
 using Engine.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Mined_Out.Views
 {
@@ -17,6 +19,23 @@ namespace Mined_Out.Views
 		public void ShowMenu()
 		{
 			Console.Clear();
+			using (ApplicationDbContext db = new ApplicationDbContext())
+			{
+				List<BestScore> score = db.BestScore.ToList();
+				if (score.Count == 0)
+				{
+					score = new List<BestScore>();
+					var bestScore = new BestScore();
+					bestScore.Score = 0;
+					score.Add(bestScore);
+					db.BestScore.AddRange(score);
+					db.SaveChanges();
+				}
+					
+				Console.WriteLine("Рекорд: " + db.BestScore.ToList()[0].Score);
+				Console.WriteLine();
+				Console.WriteLine();
+			}
 
 			Console.WriteLine("Начать игру с первого уровня: 1");
 			Console.WriteLine("Загрузить сохранения: 2");

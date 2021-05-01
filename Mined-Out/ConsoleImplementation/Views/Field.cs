@@ -18,11 +18,12 @@ namespace Mined_Out
 
         public void DrawField(string bomb)
         {
+            _isRedrawing = true;
             Console.Clear();
 
-            _isRedrawing = true;
             Console.ForegroundColor = ConsoleColor.Gray;
 			Console.WriteLine("Уровень: " + Game.Level);
+            Console.WriteLine("Счет: " + Game.Score);
             for (int i = 0; i < Game.PlayingField.Cells.GetLength(0); i++)
             {
                 for (int j = 0; j < Game.PlayingField.Cells.GetLength(1); j++)
@@ -80,8 +81,18 @@ namespace Mined_Out
             {
                 if(!_isRedrawing)
 				{
-                    Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    Console.WriteLine("Время прохождения уровня: " + Game.TimeCounter.AmountOfTime);
+                    try
+					{
+                        _isRedrawing = true;
+                        Console.SetCursorPosition(0, Console.CursorTop - 1);
+                        Console.WriteLine("Время прохождения уровня: " + Game.TimeCounter.AmountOfTime);
+                        _isRedrawing = false;
+                    }
+                    catch
+					{
+						Console.WriteLine("())()()()()()(())())()");
+					}
+
                 }
                 Thread.Sleep(100);
             }

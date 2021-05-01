@@ -54,8 +54,11 @@ namespace Mined_Out
 
                 if(Game.IsWinning)
 				{
+                    Game.CalculatePlayerPoints();
                     Game.LoadLevel();
-				}
+                    field.DrawField(" ");
+                    field.StartTimer(0);
+                }
                 else if(Game.IsLoosing)
 				{
 					Console.WriteLine("Если хотети начать заново, нажмите: y");
@@ -68,6 +71,8 @@ namespace Mined_Out
                         if (k == ConsoleKey.Y)
 						{
                             Game.LoadLevel();
+                            field.DrawField(" ");
+                            field.StartTimer(0);
                             isRestart = true;
                         }
 					}

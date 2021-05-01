@@ -1,5 +1,6 @@
 ﻿using Engine.Data;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Engine.Models
 {
@@ -11,20 +12,26 @@ namespace Engine.Models
         public bool IsSaved { get; set; }
         public int Level { get; set; }
         public int NumberOfMoves { get; set; }
-        public int Scores { get; set; }
+        public int Score { get; set; } = 0;
         public TimeCounter TimeCounter { get; set; }
 
         public Game()
         {
             Level = 1;
-            Scores = 0;
+            Score = 0;
             LoadLevel();
         }
 
         public void LoadLevel()
 		{
-            IsLoosing = false;
+            if(IsLoosing)
+			{
+                Score = 0;
+                Level = 1;
+			}
+
             IsWinning = false;
+            IsLoosing = false;
 
             NumberOfMoves = 0;
 
@@ -158,7 +165,7 @@ namespace Engine.Models
             save.NumberOfMoves = NumberOfMoves;
             save.Level = Level;
             save.FieldCellSize = PlayingField.CellSize;
-            save.Scores = Scores;
+            save.Scores = Score;
             save.FieldHeight = PlayingField.FieldSize.Height;
             save.FieldWidth = PlayingField.FieldSize.Width;
             save.Players = new List<Player> { PlayingField.Player };
@@ -175,14 +182,29 @@ namespace Engine.Models
             IsSaved = true;
         }
 
-        private void CalculatePlayerPoints()
+        public void CalculatePlayerPoints()
 		{
+            Score += Level * ((100/TimeCounter.AmountOfTime) + (PlayingField.Cells.GetLength(0) / NumberOfMoves));
 
+            UpdateBestScore();
 		}
 
         private void UpdateBestScore()
-		{
+        {
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                var bestScore = db.BestScore.ToList()[0];
+                if(bestScore.Score < Score)
+                {
+                    var newBestScore = new BestScore();
+                    newBestScore.Score = Score;
 
-		}
+                    db.BestScore.Remove(bestScore);
+                    db.BestScore.Add(newBestScore);
+
+                    db.SaveChanges();
+				}
+            }
+        }
     }
 }
