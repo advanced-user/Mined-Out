@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Engine.Math;
+using System;
 using System.Collections.Generic;
 
 namespace Engine.Models
@@ -134,6 +135,9 @@ namespace Engine.Models
                 Bomb bomb = new Bomb(y, x);
                 Cells[y,x].Value = bomb;
             }
+
+            Graph graph = new Graph(Cells);
+
         }
 
         private void GeneratePlayer()

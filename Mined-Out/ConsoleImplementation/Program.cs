@@ -1,4 +1,5 @@
 ﻿using Engine.Models;
+using Mined_Out.Views;
 
 namespace Mined_Out
 {
@@ -9,7 +10,10 @@ namespace Mined_Out
             Game game = new Game();
             PlayerController playerController = new PlayerController(game);
 
-            playerController.HandlingKeystrokes();
+            Field field = new Field(game);
+            field.DrawField("b");
+
+            //playerController.HandlingKeystrokes();
         }
     }
 }

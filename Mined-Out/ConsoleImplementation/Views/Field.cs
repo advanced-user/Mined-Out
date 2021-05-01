@@ -19,7 +19,7 @@ namespace Mined_Out
         public void DrawField(string bomb)
         {
             _isRedrawing = true;
-            Console.Clear();
+            //Console.Clear();
 
             Console.ForegroundColor = ConsoleColor.Gray;
 			Console.WriteLine("Уровень: " + Game.Level);
@@ -90,7 +90,6 @@ namespace Mined_Out
                     }
                     catch
 					{
-						Console.WriteLine("())()()()()()(())())()");
 					}
 
                 }
