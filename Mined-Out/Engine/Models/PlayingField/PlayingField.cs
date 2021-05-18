@@ -9,7 +9,7 @@ namespace Engine.Models
         public Cell[,] Cells { get; set; }
         public Player Player { get; set; }
         public  Size FieldSize { get; set; }
-        public int CellSize { get; set; }
+        public readonly int CellSize;
 
         public PlayingField(int numberOfBombs, int width, int height, int cellSize)
         {
