@@ -1,12 +1,10 @@
 ﻿namespace Engine.Models
 {
-    public struct Cell
-    {
-        public readonly Size Size;
-        public Coordinates Coordinates;
-        public object Value;
+    public class Cell : EmptyCell
+	{
+        public object Value { get; set; }
 
-        public Cell(object value,double x, double y, int size)
+        public Cell(object value, double x, double y, int size) : base(size, x, y) 
         {
             Value = value;
             Coordinates = new Coordinates(x, y);

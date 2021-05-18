@@ -110,13 +110,36 @@ namespace Mined_Out.Views
 							{
 								if (index == number)
 								{
-									var player = save.Players[0];
-									var playerFootprints = save.PlayerFootprints;
-									var bombs = save.Bombs;
-									var barriers = save.Barriers;
+									var dataPlayer = save.Players[0];
+									var dataPlayerFootprints = save.PlayerFootprints;
+									var dataBombs = save.Bombs;
+									var dataBarriers = save.Barriers;
 									var width = save.FieldWidth;
 									var height = save.FieldHeight;
 									var fieldCellSize = save.FieldCellSize;
+
+									Engine.Models.Player.Player player = new Engine.Models.Player.Player(dataPlayer.NumberOfBombs, "#", 0, 0, dataPlayer.I, dataPlayer.J, 1);
+									List<Engine.Models.Player.PlayerFootprint> playerFootprints = new List<Engine.Models.Player.PlayerFootprint>();
+									List<Engine.Models.Bomb> bombs = new List<Engine.Models.Bomb>();
+									List<Engine.Models.Barrier> barriers = new List<Engine.Models.Barrier>();
+
+									foreach (var item in dataPlayerFootprints)
+									{
+										Engine.Models.Player.PlayerFootprint playerFootprint = new Engine.Models.Player.PlayerFootprint(1, "#", 0, 0, item.I, item.J);
+										playerFootprints.Add(playerFootprint);
+									}
+
+									foreach (var item in dataBombs)
+									{
+										Engine.Models.Bomb bomb = new Engine.Models.Bomb(1, "#", 0, 0, item.I, item.J);
+										bombs.Add(bomb);
+									}
+
+									foreach (var item in dataBarriers)
+									{
+										Engine.Models.Barrier barrier = new Engine.Models.Barrier(1, "#", 0, 0, item.I, item.J);
+										barriers.Add(barrier);
+									}
 
 									Game.PlayingField = new PlayingField(player, playerFootprints, bombs, barriers, width, height, fieldCellSize);
 

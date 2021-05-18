@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.Json.Serialization;
 
 namespace Engine.Models
 {
@@ -75,7 +74,7 @@ namespace Engine.Models
 
         private void FootPrint(int i, int j)
         {
-            PlayerFootprint playerFootprint = new PlayerFootprint(i, j);
+            Player.PlayerFootprint playerFootprint = new Player.PlayerFootprint(1, ".", PlayingField.Cells[i, j].Coordinates.X, PlayingField.Cells[i, j].Coordinates.Y, i, j);
             PlayingField.Cells[i, j].Value = playerFootprint;
         }
 
@@ -94,7 +93,7 @@ namespace Engine.Models
                 return;
             }
 
-            if (PlayingField.Cells[i,j].Value == null || PlayingField.Cells[i,j].Value is PlayerFootprint)
+            if (PlayingField.Cells[i,j].Value == null || PlayingField.Cells[i,j].Value is Player.PlayerFootprint)
 			{
                 PlayingField.Cells[i, j].Value = PlayingField.Player;
                 PlayingField.Player.I = i;
@@ -133,9 +132,9 @@ namespace Engine.Models
 
         public void SaveTheGame()
 		{
-            var bombs = new List<Bomb>();
-            var playerFootprints = new List<PlayerFootprint>();
-            var barriers = new List<Barrier>();
+            var bombs = new List<Data.Bomb>();
+            var playerFootprints = new List<Data.PlayerFootprint>();
+            var barriers = new List<Data.Barrier>();
 
             int width = PlayingField.FieldSize.Width / PlayingField.CellSize;
             int height = PlayingField.FieldSize.Height / PlayingField.CellSize;
@@ -148,22 +147,23 @@ namespace Engine.Models
 					{
                         if(PlayingField.Cells[i, j].Value is Barrier)
 						{
-                            Barrier barrier = new Barrier(i , j);
+                            Data.Barrier barrier = new Data.Barrier(i , j);
                             barriers.Add(barrier);
 						}
-                        else if(PlayingField.Cells[i, j].Value is PlayerFootprint)
+                        else if(PlayingField.Cells[i, j].Value is Player.PlayerFootprint)
 						{
                             PlayerFootprint playerFootprint = new PlayerFootprint(i, j);
                             playerFootprints.Add(playerFootprint);
                         }
                         else if(PlayingField.Cells[i, j]. Value is Bomb)
 						{
-                            Bomb bomb = new Bomb(i, j);
+                            Data.Bomb bomb = new Data.Bomb(i, j);
                             bombs.Add(bomb);
                         }
 					}
 				}
 			}
+            Data.Player player = new Data.Player(PlayingField.Player.I, PlayingField.Player.J);
 
             Save save = new Save();
             save.Time = TimeCounter.AmountOfTime;
@@ -173,7 +173,7 @@ namespace Engine.Models
             save.Scores = Score;
             save.FieldHeight = PlayingField.FieldSize.Height;
             save.FieldWidth = PlayingField.FieldSize.Width;
-            save.Players = new List<Player> { PlayingField.Player };
+            save.Players = new List<Data.Player> { player };
             save.Barriers = barriers;
             save.Bombs = bombs;
             save.PlayerFootprints = playerFootprints;

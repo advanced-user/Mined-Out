@@ -1,4 +1,5 @@
 ﻿using Engine.Math;
+using Engine.Models.Player;
 using System;
 using System.Collections.Generic;
 
@@ -6,8 +7,8 @@ namespace Engine.Models
 {
     public class PlayingField
     {
-        public Cell[,] Cells { get; set; }
-        public Player Player { get; set; }
+        public Cell [,] Cells { get; set; }
+        public Player.Player Player { get; set; }
         public  Size FieldSize { get; set; }
         public readonly int CellSize;
 
@@ -31,7 +32,7 @@ namespace Engine.Models
             }
         }
 
-        public PlayingField(Player player, List<PlayerFootprint> playerFootprints, List<Bomb> bombs, List<Barrier> barriers, int width, int height, int fieldCellSize)
+        public PlayingField(Player.Player player, List<PlayerFootprint> playerFootprints, List<Bomb> bombs, List<Barrier> barriers, int width, int height, int fieldCellSize)
 		{
             Player = player;
             FieldSize = new Size(width, height);
@@ -116,12 +117,17 @@ namespace Engine.Models
 
             for (int i = 1; i < FieldSize.Height - 1; i++)
             {
-                Barrier barrier1 = new Barrier(i, 0);
+                Barrier barrier1 = new Barrier(CellSize, "#", Cells[i, 0].Coordinates.X, Cells[i, 0].Coordinates.Y, i, 0);
                 Cells[i, 0].Value = barrier1;
                 
-                Barrier barrier2 = new Barrier(i, Cells.GetLength(1) - 1);
+                Barrier barrier2 = new Barrier(
+                    CellSize,
+                    "#",
+                    Cells[i, Cells.GetLength(1) - 1].Coordinates.X,
+                    Cells[i, Cells.GetLength(1) - 1].Coordinates.Y,
+                    i,
+                    Cells.GetLength(1) - 1);
                 Cells[i, Cells.GetLength(1) - 1].Value = barrier2;
-                
             }
             
             StartAndFinishBarriers(indexX, Cells.GetLength(1) - 1);
@@ -133,7 +139,7 @@ namespace Engine.Models
             {
                 if (i != indexX - 1 && i != indexX && i != indexX + 1)
                 {
-                    Barrier barrier = new Barrier(indexY, i);
+                    Barrier barrier = new Barrier(CellSize, "#", Cells[indexY, i].Coordinates.X, Cells[indexY, i].Coordinates.Y, indexY, i);
                     Cells[indexY, i].Value = barrier;
                 }
             }
@@ -148,7 +154,7 @@ namespace Engine.Models
                 int x = rnd.Next(1, Cells.GetLength(1) - 1);
                 int y = rnd.Next(2, Cells.GetLength(0) - 2);
 
-                Bomb bomb = new Bomb(y, x);
+                Bomb bomb = new Bomb(CellSize, "b", Cells[y, x].Coordinates.X, Cells[y, x].Coordinates.Y, y, x);
                 Cells[y,x].Value = bomb;
             }
         }
@@ -158,7 +164,7 @@ namespace Engine.Models
             int indexX = Cells.GetLength(1) / 2;
             int indexY = Cells.GetLength(0) - 1;
 
-            Player = new Player(indexY, indexX);
+            Player = new Player.Player(0, "", Cells[indexY, indexX].Coordinates.X, Cells[indexY, indexX].Coordinates.Y, indexY, indexX, CellSize);
             Cells[indexY, indexX].Value = Player;
         }
     }
