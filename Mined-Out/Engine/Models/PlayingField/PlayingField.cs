@@ -19,7 +19,19 @@ namespace Engine.Models
             FieldGeneration(numberOfBombs);
         }
 
-		public PlayingField(Player player, List<PlayerFootprint> playerFootprints, List<Bomb> bombs, List<Barrier> barriers, int width, int height, int fieldCellSize)
+        public Cell this[int i, int j]
+        {
+            get
+            {
+                return Cells[i, j];
+            }
+            set
+            {
+                Cells[i, j] = value;
+            }
+        }
+
+        public PlayingField(Player player, List<PlayerFootprint> playerFootprints, List<Bomb> bombs, List<Barrier> barriers, int width, int height, int fieldCellSize)
 		{
             Player = player;
             FieldSize = new Size(width, height);

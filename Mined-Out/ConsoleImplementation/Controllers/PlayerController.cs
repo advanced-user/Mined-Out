@@ -60,7 +60,7 @@ namespace Mined_Out
                 }
                 else if(Game.IsLoosing)
 				{
-					Console.WriteLine("Если хотети начать заново, нажмите: y");
+					Console.WriteLine("Если хотите начать заново, нажмите: y");
 
                     bool isRestart = false;
 
