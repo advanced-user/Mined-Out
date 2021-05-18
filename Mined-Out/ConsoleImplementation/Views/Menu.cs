@@ -123,6 +123,7 @@ namespace Mined_Out.Views
 									Game.Level = save.Level;
 									Game.NumberOfMoves = save.NumberOfMoves;
 									Game.TimeCounter = new TimeCounter(save.Time);
+									Game.Score = (int)save.Scores;
 
 									break;
 								}

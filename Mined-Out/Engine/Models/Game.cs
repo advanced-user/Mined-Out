@@ -40,7 +40,7 @@ namespace Engine.Models
 
             var game = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(@"C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine\Data\settings.json"));
 
-            int numberOfBombs = game.NumberOfBombs + Level*100;
+            int numberOfBombs = game.NumberOfBombs + Level*5;
             int width = game.Width + Level*2;
             int height = game.Height + Level * 2;
             int cellSize = game.CellSize;
