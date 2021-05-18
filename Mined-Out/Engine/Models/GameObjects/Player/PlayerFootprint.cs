@@ -1,12 +1,9 @@
 ﻿namespace Engine.Models.Player
 {
-	public class PlayerFootprint : EmptyCell
+	public class PlayerFootprint : GameObject
 	{
-        public int I { get; set; }
-        public int J { get; set; }
-        public string Img { get; set; }
         public PlayerFootprint(int size, string img, double x, double y, int i, int j)
-            : base(size, x, y)
+            : base(size, img, x, y, i, j)
         {
             I = i;
             J = j;

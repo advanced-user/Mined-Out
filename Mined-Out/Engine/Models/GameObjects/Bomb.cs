@@ -1,12 +1,9 @@
 ﻿namespace Engine.Models
 {
-	public class Bomb : EmptyCell
+	public class Bomb : GameObject
 	{
-        public int I { get; set; }
-        public int J { get; set; }
-        public string Img { get; set; }
         public Bomb(int size, string img, double x, double y, int i, int j)
-            : base(size, x, y)
+            : base(size, img, x, y, i, j)
         {
             I = i;
             J = j;

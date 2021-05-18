@@ -1,13 +1,10 @@
 ﻿namespace Engine.Models.Player
 {
-    public class Player : EmptyCell
+    public class Player : GameObject
     {
-        public int I { get; set; }
-        public int J { get; set; }
-        public string Img { get; set; }
         public int NumberOfBombs { get; set; }
         public Player(int numberOfBombs, string img, double x, double y, int i, int j, int size)
-            : base(size, x, y)
+            : base(size, img, x, y, i, j)
         {
             I = i;
             J = j;
