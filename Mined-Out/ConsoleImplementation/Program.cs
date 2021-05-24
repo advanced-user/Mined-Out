@@ -1,4 +1,6 @@
-﻿using Engine.Models;
+﻿using System;
+using System.Collections.Generic;
+using Engine.Models;
 
 namespace Mined_Out
 {
@@ -9,10 +11,10 @@ namespace Mined_Out
             Game game = new Game();
             PlayerController playerController = new PlayerController(game);
 
-            //Field field = new Field(game);
-            //field.DrawField("b");
+            Field field = new Field(game);
+            field.DrawField("b");
 
             playerController.HandlingKeystrokes();
-        }
+        } 
     }
 }

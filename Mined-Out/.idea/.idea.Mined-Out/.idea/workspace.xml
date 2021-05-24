@@ -5,23 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437eff80-fc60-4214-b9fd-e050a679db11" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mined-Out/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Mined-Out/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Mined-Out/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Mined-Out/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Mined-Out/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/Views/Field.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/Views/Field.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/ConsoleImplementation.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/ConsoleImplementation.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/ConsoleImplementation.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/ConsoleImplementation.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/Engine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/Engine.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/ref/ConsoleImplementation.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/bin/Debug/net5.0/ref/ConsoleImplementation.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ConsoleImplementation.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Models/PlayingField/CellIndices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Models/PlayingField/CellIndices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ref/ConsoleImplementation.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/Debug/net5.0/ref/ConsoleImplementation.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleImplementation/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleImplementation/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Data/PreservedCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Data/PreservedCell.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/Engine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/Engine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/ref/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/net5.0/ref/Engine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/net5.0/Engine.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/net5.0/Engine.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/net5.0/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/net5.0/Engine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/net5.0/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/net5.0/Engine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/net5.0/ref/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/net5.0/ref/Engine.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +39,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/Program (2).cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleImplementation/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -48,9 +54,9 @@
       <option value="$PROJECT_DIR$/Engine/Models/PlayingField/Coordinates.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/PlayingField/Size.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/PlayingField/Cell.cs" />
-      <option value="$PROJECT_DIR$/ConsoleImplementation/Program.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/PlayingField/PlayingField.cs" />
       <option value="$PROJECT_DIR$/Engine/Models/Game.cs" />
+      <option value="$PROJECT_DIR$/ConsoleImplementation/Program.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1q9KzhmE9WvxAGXB2QpXn7Qn9NV" />
@@ -106,6 +112,9 @@
       <workItem from="1618241410188" duration="7925000" />
       <workItem from="1618254206738" duration="2875000" />
       <workItem from="1619104368449" duration="38000" />
+      <workItem from="1621501233972" duration="547000" />
+      <workItem from="1621600153308" duration="2192000" />
+      <workItem from="1621868950182" duration="50000" />
     </task>
     <servers />
   </component>
@@ -128,24 +137,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Engine/Models/PlayingField/PlayingField.cs</url>
-          <line>96</line>
-          <properties documentPath="C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine\Models\PlayingField\PlayingField.cs" initialLine="96" containingFunctionPresentation="method 'GeneratePlayer'">
-            <startOffsets>
-              <option value="2884" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2886" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
