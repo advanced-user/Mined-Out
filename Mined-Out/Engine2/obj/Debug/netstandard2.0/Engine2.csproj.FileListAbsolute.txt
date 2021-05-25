@@ -1,0 +1,9 @@
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine2\bin\Debug\netstandard2.0\Engine2.deps.json
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine2\bin\Debug\netstandard2.0\Engine2.dll
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine2\bin\Debug\netstandard2.0\Engine2.pdb
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine2\obj\Debug\netstandard2.0\Engine2.csprojAssemblyReference.cache
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine2\obj\Debug\netstandard2.0\Engine2.AssemblyInfoInputs.cache
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine2\obj\Debug\netstandard2.0\Engine2.AssemblyInfo.cs
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine2\obj\Debug\netstandard2.0\Engine2.csproj.CoreCompileInputs.cache
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine2\obj\Debug\netstandard2.0\Engine2.dll
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\Engine2\obj\Debug\netstandard2.0\Engine2.pdb

@@ -1,0 +1,15 @@
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\bin\Debug\GUI.exe.config
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\bin\Debug\GUI.exe
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\bin\Debug\GUI.pdb
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.GameForm.resources
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.MainForm.resources
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.PreservationForm.resources
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.exe
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.pdb
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\bin\Debug\Engine2.dll
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\bin\Debug\Engine2.pdb
+C:\Users\Home\Desktop\Mined-Out\Mined-Out\GUI\obj\Debug\GUI.csproj.CopyComplete
