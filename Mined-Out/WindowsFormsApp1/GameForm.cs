@@ -171,7 +171,7 @@ namespace GUI
 				else if (Game.IsLoosing)
 				{
 					panel1.Enabled = false;
-
+					timer1.Enabled = false;
 					label5.Visible = true;
 				}
 
