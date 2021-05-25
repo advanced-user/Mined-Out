@@ -14,12 +14,14 @@ namespace GUI
 	public partial class GameForm : Form
 	{
 		public Game Game { get; set; }
+		public Block[,] Blocks { get; set; }
 
 		public GameForm()
 		{
 			InitializeComponent();
 			Game = new Game();
 
+			Blocks = new Block[Game.PlayingField.FieldSize.Height, Game.PlayingField.FieldSize.Width];
 		}
 
 		public GameForm(Save save)
@@ -47,6 +49,13 @@ namespace GUI
 					Game.SaveTheGame();
 					break;
 			}
+		}
+
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+			int time = Convert.ToInt32(timeCounter.Text);
+			time++;
+			timeCounter.Text = time.ToString();
 		}
 	}
 }
