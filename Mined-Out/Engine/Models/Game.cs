@@ -194,6 +194,13 @@ namespace Engine.Models
             UpdateBestScore();
 		}
 
+        public void CalculatePlayerPoints(int time)
+        {
+            Score += Level * ((100 / time) + (PlayingField.Cells.GetLength(0) / NumberOfMoves));
+
+            UpdateBestScore();
+        }
+
         private void UpdateBestScore()
         {
             using (ApplicationDbContext db = new ApplicationDbContext())

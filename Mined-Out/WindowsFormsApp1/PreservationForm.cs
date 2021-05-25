@@ -27,9 +27,11 @@ namespace GUI
 
 		private void ShowData()
 		{
+			int i = 0;
 			foreach (var save in Saves)
 			{
-				dataGridView.Rows.Add(save.Id, save.Level, save.Score);
+				dataGridView.Rows.Add(i, save.Level, save.Scores); 
+				i++;
 			}
 		}
 
@@ -54,6 +56,15 @@ namespace GUI
 			try
 			{
 				int number = Convert.ToInt32(Input.Text);
+				if (number >= Saves.Count || number < 0)
+				{
+
+				}
+				else
+				{
+					GameForm game = new GameForm(Saves[number]);
+					game.ShowDialog();
+				}
 			}
 			catch (Exception)
 			{

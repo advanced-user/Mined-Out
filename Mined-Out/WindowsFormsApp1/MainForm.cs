@@ -15,13 +15,13 @@ namespace WindowsFormsApp1
 {
 	public partial class MainForm : Form
 	{
-		private readonly List<GUI.Save> Saves;
+		private readonly List<Save> Saves;
 
 		public MainForm()
 		{
 			InitializeComponent();
 
-			Saves = new List<GUI.Save>();
+			Saves = new List<Save>();
 
 			LoadingDataAsync();
 		}
@@ -40,13 +40,24 @@ namespace WindowsFormsApp1
 					.Include(s => s.Bombs)
 					.Include(s => s.Barriers);
 
-				int i = 1;
-
 				foreach (var save in saves)
 				{
-					GUI.Save s = new GUI.Save(i, save.Level, save.Scores);
+					Save s = new Save();
+
+					s.Players = save.Players;
+					s.PlayerFootprints = save.PlayerFootprints;
+					s.Bombs = save.Bombs;
+					s.Barriers = save.Barriers;
+					s.FieldWidth = save.FieldWidth;
+					s.FieldHeight = save.FieldHeight;
+					s.FieldCellSize = save.FieldCellSize;
+					s.Level = save.Level;
+					s.NumberOfMoves = save.NumberOfMoves;
+					s.Scores = save.Scores;
+					s.Time = save.Time;
+
+
 					Saves.Add(s);
-					i++;
 				}
 			}
 		}
