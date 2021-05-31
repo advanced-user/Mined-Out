@@ -210,5 +210,80 @@ namespace GUI
 				}
 			}
 		}
+
+		private void panel1_MouseClick(object sender, MouseEventArgs e)
+		{
+			if(e.Button == MouseButtons.Right)
+			{
+				for (int i = 0; i < Blocks.GetLength(0); i++)
+				{
+					for (int j = 0; j < Blocks.GetLength(1); j++)
+					{
+						if (Blocks[i, j].Left <= e.Location.X && Blocks[i, j].Left + Blocks[i, j].Height >= e.Location.X
+							&& Blocks[i, j].Top <= e.Location.Y && Blocks[i, j].Top + Blocks[i, j].Height >= e.Location.Y)
+						{
+							if (!(Game.PlayingField[j, i].Value is Engine.Models.Player.Player)
+								&& !(Game.PlayingField[j, i].Value is Engine.Models.Barrier)
+								&& !(Game.PlayingField[j, i].Value is Engine.Models.Player.PlayerFootprint)
+								&& !(Game.PlayingField[j, i].Value is Engine.Models.GameObjects.Flag))
+							{
+								Engine.Models.GameObjects.Flag flag = new Engine.Models.GameObjects.Flag(25, "b", Game.PlayingField.Cells[i, j].Coordinates.X, Game.PlayingField.Cells[j, i].Coordinates.Y, j, i);
+								Game.PlayingField[j, i].Value = flag;
+							}
+							else if (Game.PlayingField[j, i].Value is Engine.Models.GameObjects.Flag)
+							{
+								Game.PlayingField[j, i].Value = null;
+							}
+						}
+					}
+				}
+			}
+			else if(e.Button == MouseButtons.Left)
+			{
+				for (int i = 0; i < Blocks.GetLength(0); i++)
+				{
+					for (int j = 0; j < Blocks.GetLength(1); j++)
+					{
+						if (Blocks[i, j].Left <= e.Location.X && Blocks[i, j].Left + Blocks[i, j].Height >= e.Location.X
+							&& Blocks[i, j].Top <= e.Location.Y && Blocks[i, j].Top + Blocks[i, j].Height >= e.Location.Y)
+						{
+							int I = j;
+							int J = i;
+
+							if(I >= 1 && I < Game.PlayingField.Cells.GetLength(0)-1 
+								&& J >= 1 && J < Game.PlayingField.Cells.GetLength(1)-1)
+							{
+								if(Game.PlayingField[I - 1, J].Value is Engine.Models.Player.PlayerFootprint
+									|| Game.PlayingField[I, J - 1].Value is Engine.Models.Player.PlayerFootprint
+									|| Game.PlayingField[I + 1, J].Value is Engine.Models.Player.PlayerFootprint
+									|| Game.PlayingField[I, J + 1].Value is Engine.Models.Player.PlayerFootprint
+									|| Game.PlayingField[I - 1, J].Value is Engine.Models.Player.Player
+									|| Game.PlayingField[I, J - 1].Value is Engine.Models.Player.Player
+									|| Game.PlayingField[I + 1, J].Value is Engine.Models.Player.Player
+									|| Game.PlayingField[I, J + 1].Value is Engine.Models.Player.Player)
+								{
+									for (int g = 0; g < Game.PlayingField.Cells.GetLength(0); g++)
+									{
+										for (int k = 0; k < Game.PlayingField.Cells.GetLength(0); k++)
+										{
+											if(Game.PlayingField[g, k].Value is Engine.Models.Player.Player)
+											{
+												Engine.Models.Player.PlayerFootprint playerFootprint = new Engine.Models.Player.PlayerFootprint(25, ".", Game.PlayingField.Cells[g, k].Coordinates.X, Game.PlayingField.Cells[g, k].Coordinates.Y, g, k);
+												Game.PlayingField[g, k].Value = playerFootprint;
+
+												Game.Move(I, J);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			UpdateCells();
+			panel1.Invalidate();
+		}
 	}
 }

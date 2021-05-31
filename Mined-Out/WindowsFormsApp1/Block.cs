@@ -12,6 +12,7 @@ namespace GUI
 		public int Width { get; set; }
 		public int Height { get; set; }
 		public object Value { get; set; }
+		public bool IsBlownUp { get; set; }
 		public int NumberOfBombs { get; set; }
 
 
@@ -43,17 +44,34 @@ namespace GUI
 			}
 			else if(Value is PlayerFootprint)
 			{
-				Pen p = new Pen(Color.White);
+				Pen p = new Pen(Color.Black);
 				graphics.DrawRectangle(p, Left, Top, Width, Height);
-				Font font = new Font("Arial", 14, FontStyle.Regular);
-				graphics.DrawString(".", font, Brushes.Green, Left, Top);
+				Image image = Image.FromFile("img/Footprint.png");
+				graphics.DrawImage(image, Left, Top);
 			}
 			else if(Value is Bomb && isLoose)
 			{
-				SolidBrush b = new SolidBrush(Color.Red);
 				Pen p = new Pen(Color.Black);
 				graphics.DrawRectangle(p, Left, Top, Width, Height);
-				graphics.FillRectangle(b, Left, Top, Width, Height);
+
+				Image image = Image.FromFile("img/bomb.png");
+				graphics.DrawImage(image, Left, Top);
+			}
+			else if(Value is Engine.Models.GameObjects.DetonatedBomb)
+			{
+				Pen p = new Pen(Color.Black);
+				graphics.DrawRectangle(p, Left, Top, Width, Height);
+
+				Image image = Image.FromFile("img/boom.png");
+				graphics.DrawImage(image, Left, Top);
+			}
+			else if(Value is Engine.Models.GameObjects.Flag)
+			{
+				Pen p = new Pen(Color.Black);
+				graphics.DrawRectangle(p, Left, Top, Width, Height);
+
+				Image image = Image.FromFile("img/flag.png");
+				graphics.DrawImage(image, Left, Top);
 			}
 			else
 			{

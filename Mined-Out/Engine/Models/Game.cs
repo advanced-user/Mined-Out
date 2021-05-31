@@ -78,7 +78,7 @@ namespace Engine.Models
             PlayingField.Cells[i, j].Value = playerFootprint;
         }
 
-        private void Move(int i, int j)
+        public void Move(int i, int j)
 		{
             if (i >= PlayingField.Cells.GetLength(0))
             {
@@ -104,7 +104,8 @@ namespace Engine.Models
                 return;
 
 			}
-
+            GameObjects.DetonatedBomb detonatedBomb = new GameObjects.DetonatedBomb(25, "b", PlayingField.Cells[i, j].Coordinates.X, PlayingField.Cells[i, j].Coordinates.Y, i, j);
+            PlayingField.Cells[i, j].Value = detonatedBomb;
             GameOver();
         }
 
